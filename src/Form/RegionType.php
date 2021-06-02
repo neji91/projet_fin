@@ -11,7 +11,11 @@ class RegionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('field_name')
+            ->add('name')
+            ->add('description')
+            ->add('carte_svg')
+            ->add('nom_bdd')
+            ->add('departements')
         ;
     }
 

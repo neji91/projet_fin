@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Région{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Région</h1>
+    <a href="{{ path('region_new') }}" class="btn btn-info">Nouveau</a>
+</div>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>description</th>
+                <th>Carte svg</th>
+                <th>Nom bdd</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for region in regions %}
+            <tr>
+                <td>{{ region.id }}</td>
+                <td>{{ region.name }}</td>
+                <td>{{ region.Descritpion }}</td>
+                <td>{{ region.CarteSvg }}</td>
+                <td>{{ region.NomBdd }}</td>
+                
+                <td>
+                    <div class="d-flex">
+                    <a href="{{ path('region_show', {'id': region.id}) }}" class="btn btn-info me-2"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('region_edit', {'id': region.id}) }}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun enregistrement</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Région{% endblock %}
+
+{% block body %}
+    <h1>Région</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ region.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ region.name }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ region.description }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ region.carte_svg }}</td>
+            </tr>
+            <tr>
+                <th>Texte</th>
+                <td>{{ region.categorie }}</td>
+            </tr>
+            <tr>
+                <th>Texte</th>
+                <td>{{ objetCul.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('region_back') }}">back to list</a>
+
+    <a href="{{ path('region_edit', {'id': region.id}) }}">edit</a>
+
+    {{ include('back/region_back/_delete_form.html.twig') }}
+{% endblock %}
