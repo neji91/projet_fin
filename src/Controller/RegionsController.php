@@ -21,7 +21,7 @@ class RegionsController extends AbstractController
             'superRegion' => $superRegion
         ]);
 
-       
+    
     }
     /**
      * @Route("/region/{nom}", name="region")
