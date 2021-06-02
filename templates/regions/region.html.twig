@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1 class="text-center"> BIENVENUE EN {{ region.name|upper }}</h1>
+{# {{ dump(region)}} #}
+<div class="row">
+    <div class="col-12 col-md-4">
+        <div class="carte-region">
+        {{ region.carteSvg|raw }}
+        </div>
+    </div>
+    <div class="col-12 col-md-8">
+    {% if region.description is defined and region.description is not null %}
+    {{ region.description|raw }}
+    {% endif %}
+    </div>
+</div>
+
+
+
+{#{% for departement in region.departements %}#}
+
+{#<h2>{{ departement.name}}</h2>#}
+{# <div>{{ region.sous_region}}</div> #}
+ {#{% endfor %}#}
+
+ {% endblock %}

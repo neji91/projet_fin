@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} REGION {{ superRegion.name }}{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+  
+<div class="example-wrapper">
+    <h1> VOUS VISITEZ LA REGION {{ superRegion.name|upper }}</h1>
+{# <?xml version="1.0" encoding="utf-8"?> #}
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+{{ superRegion.carte|raw }}
+{% for region in superRegion.regions %}
+
+<h2>{{ region.name}}</h2>
+{# <div>{{ region.sous_region}}</div> #}
+{% endfor %}
+{% endblock %}
+    
+  
+
+
+
