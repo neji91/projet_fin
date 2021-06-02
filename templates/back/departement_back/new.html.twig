@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveaux departement{% endblock %}
+
+    
+
+
+{% block body %}
+    <h1> département </h1>
+
+    {{ include('back/departement_back/_form.html.twig') }}
+
+    <a href="{{ path('departement_back') }}">back to list</a>
+{% endblock %}

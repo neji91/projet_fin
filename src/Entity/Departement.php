@@ -27,6 +27,11 @@ class Departement
      */
     private $CP;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Region::class, inversedBy="departements")
+     */
+    private $region;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Departement
     public function setCP(string $CP): self
     {
         $this->CP = $CP;
+
+        return $this;
+    }
+
+    public function getRegion(): ?Region
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?Region $region): self
+    {
+        $this->region = $region;
 
         return $this;
     }

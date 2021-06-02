@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Departement{% endblock %}
+
+{% block body %}
+    <h1>Departement</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ departement.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ departement.name }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ departement.cp }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ departement.region }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('departement_back') }}">back to list</a>
+
+    <a href="{{ path('departement_edit', {'id': Departement.id}) }}">edit</a>
+
+    {{ include('back/departement_back/_delete_form.html.twig') }}
+{% endblock %}
