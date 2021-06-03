@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveaux Object culturel{% endblock %}
+
+    
+
+
+{% block body %}
+    <h1> Object culturel</h1>
+
+    {{ include('back/objet_cul_back/_form.html.twig') }}
+
+    <a href="{{ path('objet_cul_back') }}">back to list</a>
+{% endblock %}

@@ -25,14 +25,14 @@ class Region
      */
     private $name;
     /**
-     * @ORM\Column(type="text",  nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $description;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $carteSvg;
+    private $carte_svg;
 
     /**
      * @ORM\Column(type="string", length=50)
@@ -71,7 +71,7 @@ class Region
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDescritpion(): ?string
     {
         return $this->description;
     }
@@ -85,12 +85,12 @@ class Region
 
     public function getCarteSvg(): ?string
     {
-        return $this->carteSvg;
+        return $this->carte_svg;
     }
 
-    public function setCarteSvg(string $carteSvg): self
+    public function setCarteSvg(string $carte_svg): self
     {
-        $this->carteSvg = $carteSvg;
+        $this->carte_svg = $carte_svg;
 
         return $this;
     }

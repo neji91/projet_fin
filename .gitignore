@@ -15,5 +15,3 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 .env
-/migrations
-##/cartes_sources
